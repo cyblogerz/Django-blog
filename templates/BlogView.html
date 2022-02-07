@@ -1,6 +1,17 @@
 {% extends 'base.html' %}
 
 {% block body_html %}
-<h1>Hi</h1>
+{% if data %}
+<ul>
+    {% for blog in data %}
+    <li><h1>{{ blog.post_title }}</h1>
+    <p>{{blog.post_text}}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<strong>There are no categories present.</strong>
+
+{% endif %}
 {% endblock body_html %}
 
