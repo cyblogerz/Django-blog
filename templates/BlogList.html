@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body_html %}
+{% if data %}
+{% for blog in data  %}
+<div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{blog.post_title}}</h5>
+      <p class="card-text">{{blog.post_text}}</p>
+      <a href="#" class="btn btn-primary">Read</a>
+    </div>
+  </div>
+{% endfor %}
+{% endif %}
+{% endblock body_html %}
